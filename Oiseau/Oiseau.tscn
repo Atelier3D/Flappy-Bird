@@ -1,17 +1,18 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://Assets/Oiseau/frame-1.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Oiseau/frame-2.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Oiseau/frame-3.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Oiseau/frame-4.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Oiseau/frame-5.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Oiseau/frame-6.png" type="Texture" id=6]
-[ext_resource path="res://Assets/Oiseau/frame-7.png" type="Texture" id=7]
-[ext_resource path="res://Assets/Oiseau/frame-8.png" type="Texture" id=8]
+[ext_resource path="res://Oiseau/Oiseau.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Oiseau/frame-1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Oiseau/frame-2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Oiseau/frame-3.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Oiseau/frame-4.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Oiseau/frame-5.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Oiseau/frame-6.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Oiseau/frame-7.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Oiseau/frame-8.png" type="Texture" id=9]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "vol",
 "speed": 10.0
@@ -21,15 +22,21 @@ animations = [ {
 extents = Vector2( 25.4223, 21.2706 )
 
 [node name="Oiseau" type="KinematicBody2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 1 )
 animation = "vol"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -3.79041, -1.37833 )
 shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
 

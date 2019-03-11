@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Oiseau/Oiseau.tscn" type="PackedScene" id=1]
+
+[node name="Niveau" type="Node2D"]
+
+[node name="Oiseau" parent="." instance=ExtResource( 1 )]
+position = Vector2( 387.761, 216.388 )
+

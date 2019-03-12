@@ -20,3 +20,6 @@ func _physics_process(delta):
 	mouvement.y += GRAVITE * delta
 	
 	mouvement = move_and_slide(mouvement)
+	
+func on_touche():
+	print ("On touche")

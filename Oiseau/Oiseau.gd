@@ -7,8 +7,10 @@ var mouvement = Vector2(vitesse, 0)
 
 const GRAVITE = 50
 
+var taille_ecran
 
 func _ready():
+	$Camera2D.limit_bottom = get_viewport_rect().size.y
 	pass 
 
 func _physics_process(delta):

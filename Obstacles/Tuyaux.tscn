@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Obstacles/Obstacle.gd" type="Script" id=1]
+[ext_resource path="res://Assets/sprites/pipe-green.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 20.2594, 157.075 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 21.1462, 157.608 )
+
+[node name="Tuyaux" type="Node2D"]
+script = ExtResource( 1 )
+max_pos = 200
+min_pos = 400
+
+[node name="Tuyau" type="Area2D" parent="."]
+
+[node name="Bas" type="Sprite" parent="Tuyau"]
+texture = ExtResource( 2 )
+
+[node name="Haut" type="Sprite" parent="Tuyau"]
+position = Vector2( 0, -434.066 )
+texture = ExtResource( 2 )
+flip_v = true
+
+[node name="CollisionBas" type="CollisionShape2D" parent="Tuyau"]
+shape = SubResource( 1 )
+
+[node name="CollisionHaut" type="CollisionShape2D" parent="Tuyau"]
+position = Vector2( 0.700806, -433.963 )
+shape = SubResource( 2 )
+

@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Tronc/Tronc.gd" type="Script" id=1]
+[ext_resource path="res://Obstacles/Obstacle.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Troncs/trunck.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 17.9855, 98.4118 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 5.75776, 65.6859 )
 
 [node name="Tronc" type="Node2D"]
 script = ExtResource( 1 )
@@ -46,5 +49,14 @@ flip_v = true
 position = Vector2( 19.178, 101.606 )
 shape = SubResource( 1 )
 
-[connection signal="body_entered" from="TroncBas" to="." method="_on_Tronc_body_entered"]
+[node name="Passage" type="Area2D" parent="."]
+position = Vector2( 53.8734, -51.7292 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Passage"]
+position = Vector2( -1.12111, 5.60558 )
+shape = SubResource( 2 )
+
 [connection signal="body_entered" from="TroncHaut" to="." method="_on_Tronc_body_entered"]

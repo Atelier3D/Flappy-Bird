@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Niveaux/Niveau.gd" type="Script" id=1]
-[ext_resource path="res://Tronc/Tronc.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Obstacles/Obstacle.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Fond/plx-1.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Fond/plx-2.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Fond/plx-3.png" type="Texture" id=5]
@@ -11,8 +11,8 @@
 
 [node name="Niveau" type="Node2D"]
 script = ExtResource( 1 )
-tronc = ExtResource( 2 )
-frequence_app_tronc = 6
+obstacle = ExtResource( 2 )
+frequence_app_obstacle = 6
 
 [node name="Fond" type="ParallaxBackground" parent="."]
 editor/display_folded = true

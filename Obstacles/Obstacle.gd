@@ -13,6 +13,6 @@ func initialiser(pos_x):
 	position = Vector2(pos_x, pox_y)
 
 
-func _on_Tronc_body_entered(body):
+func _on_Obstacle_body_entered(body):
 	if body.has_method("on_touche"):
 		body.on_touche()

@@ -1,18 +1,19 @@
 extends Node2D
 
-export (PackedScene) var tronc
-export (int) var frequence_app_tronc
+export (PackedScene) var obstacle
+export (int) var frequence_app_obstacle
+
 
 var duree = 0.0
 
 func _physics_process(delta):
 	duree+= delta
-	if duree >= frequence_app_tronc:
+	if duree >= frequence_app_obstacle:
 		duree = 0
-		ajouter_tronc()
+		ajouter_obstacle()
 		
 		
-func ajouter_tronc():
-	var t = tronc.instance()
-	t.initialiser($Oiseau.position.x + 500)
-	add_child(t)
+func ajouter_obstacle():
+	var obs = obstacle.instance()
+	obs.initialiser($Oiseau.position.x + 500)
+	add_child(obs)

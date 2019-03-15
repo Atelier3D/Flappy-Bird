@@ -35,9 +35,11 @@ position = Vector2( 0, 230 )
 shape = SubResource( 2 )
 
 [node name="Passage" type="Area2D" parent="."]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Passage"]
-position = Vector2( 110, 0 )
+position = Vector2( 69.9608, 0.727982 )
 shape = SubResource( 3 )
 
 [connection signal="body_entered" from="." to="." method="_on_Obstacle_body_entered"]
+[connection signal="body_entered" from="Passage" to="." method="_on_Passage_body_entered"]

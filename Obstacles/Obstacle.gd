@@ -16,3 +16,9 @@ func initialiser(pos_x):
 func _on_Obstacle_body_entered(body):
 	if body.has_method("on_touche"):
 		body.on_touche()
+
+
+func _on_Passage_body_entered(body):
+	if body.has_method("incrementer_score"):
+		body.incrementer_score()
+	pass # Replace with function body.

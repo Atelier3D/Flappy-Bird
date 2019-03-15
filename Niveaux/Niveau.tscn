@@ -2,11 +2,11 @@
 
 [ext_resource path="res://Niveaux/Niveau.gd" type="Script" id=1]
 [ext_resource path="res://Obstacles/Obstacle.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/Fond/plx-1.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Fond/plx-2.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Fond/plx-3.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Fond/plx-4.png" type="Texture" id=6]
-[ext_resource path="res://Assets/Fond/plx-5.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Backgrounds - FREE/Background 01/PARALLAX/layer_01_1920 x 1080.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Backgrounds - FREE/Background 01/PARALLAX/layer_02_1920 x 1080.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Backgrounds - FREE/Background 01/PARALLAX/layer_03_1920 x 1080.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Backgrounds - FREE/Background 01/PARALLAX/layer_04_1920 x 1080.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Backgrounds - FREE/Background 01/PARALLAX/layer_05_1920 x 1080.png" type="Texture" id=7]
 [ext_resource path="res://Oiseau/Oiseau.tscn" type="PackedScene" id=8]
 
 [node name="Niveau" type="Node2D"]
@@ -15,13 +15,12 @@ obstacle = ExtResource( 2 )
 frequence_app_obstacle = 6
 
 [node name="Fond" type="ParallaxBackground" parent="."]
-editor/display_folded = true
-scale = Vector2( 2, 2 )
-transform = Transform2D( 2, 0, 0, 2, 0, 0 )
+scale = Vector2( 1, 0.5 )
+transform = Transform2D( 1, 0, 0, 0.5, 0, 0 )
 
 [node name="CalqueFond" type="ParallaxLayer" parent="Fond"]
 motion_scale = Vector2( 0, 1 )
-motion_mirroring = Vector2( 384, 0 )
+motion_mirroring = Vector2( 1920, 0 )
 
 [node name="Sprite" type="Sprite" parent="Fond/CalqueFond"]
 texture = ExtResource( 3 )
@@ -29,7 +28,7 @@ centered = false
 
 [node name="CalqueFond2" type="ParallaxLayer" parent="Fond"]
 motion_scale = Vector2( 0.1, 1 )
-motion_mirroring = Vector2( 384, 0 )
+motion_mirroring = Vector2( 1920, 0 )
 
 [node name="Sprite" type="Sprite" parent="Fond/CalqueFond2"]
 texture = ExtResource( 4 )
@@ -37,7 +36,7 @@ centered = false
 
 [node name="CalqueFond3" type="ParallaxLayer" parent="Fond"]
 motion_scale = Vector2( 0.4, 1 )
-motion_mirroring = Vector2( 384, 0 )
+motion_mirroring = Vector2( 1920, 0 )
 
 [node name="Sprite" type="Sprite" parent="Fond/CalqueFond3"]
 texture = ExtResource( 5 )
@@ -45,14 +44,14 @@ centered = false
 
 [node name="CalqueFond4" type="ParallaxLayer" parent="Fond"]
 motion_scale = Vector2( 0.6, 1 )
-motion_mirroring = Vector2( 384, 0 )
+motion_mirroring = Vector2( 1920, 0 )
 
 [node name="Sprite" type="Sprite" parent="Fond/CalqueFond4"]
 texture = ExtResource( 6 )
 centered = false
 
 [node name="CalqueFond5" type="ParallaxLayer" parent="Fond"]
-motion_mirroring = Vector2( 384, 0 )
+motion_mirroring = Vector2( 1920, 0 )
 
 [node name="Sprite" type="Sprite" parent="Fond/CalqueFond5"]
 texture = ExtResource( 7 )

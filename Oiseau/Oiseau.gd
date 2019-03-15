@@ -7,7 +7,7 @@ var mouvement = Vector2(vitesse, 0)
 
 const GRAVITE = 50
 
-var taille_ecran
+var score = 0
 
 func _ready():
 	$Camera2D.limit_bottom = get_viewport_rect().size.y
@@ -23,3 +23,8 @@ func _physics_process(delta):
 	
 func on_touche():
 	print ("On touche")
+	$AnimationPlayer.play("mort")
+	
+func incrementer_score():
+	score +=1
+	print (score)
